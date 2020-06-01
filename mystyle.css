@@ -1,4 +1,33 @@
 /* Navbar container */
+#slideBar {
+  overflow: hidden;
+
+}
+#slideBar figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 10s slide infinite;
+}
+
+#slideBar figure img{
+  width: 20%;
+  float: left;
+
+}
+
+@keyframes slideBar {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+}
 .navbar {
   overflow: hidden;
   background-color: #333;
