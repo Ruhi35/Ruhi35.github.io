@@ -3,60 +3,45 @@
   <head>
   <link rel="stylesheet" type="text/css" href="mystyle.css">
     <h1>Welcome!</h1>
-    <style type="text/css">
-    
-    #slideBar {
-      overflow: hidden;
 
-    }
-    #slideBar figure{
-      position: relative;
-      width: 500%;
-      margin: 0;
-      left: 0;
-      animation: 10s slide infinite;
-    }
-
-    #slideBar figure img{
-      width: 20%;
-      float: left;
-
-    }
-
-    @keyframes slideBar {
-      0% {
-        left: 0;
-      }
-      20% {
-        left: 0;
-      }
-      25% {
-        left: -100%;
-      }
-    }
-
-    </style>
   </head>
     <body>
-      <div id="slideBar">
-        <figure>
-          <img src="purple-lonely-footie-header-design.jpg">
-          <img src="pink-lonely-footie-header-design.jpg">
-          <img src="red-lonely-chair-website-header-design.jpg">
-        </figure>
+      <div class="slideBar">
+        <span id= "slider-image-1"></span>
+        <span id ="slider-image-2"></span>
+        <span id ="slider-image-3"></span>
+        <div class="image-container">
+          <img src="purple-lonely-footie-header-design.jpg" class="slider-image">
+          <img src="pink-lonely-footie-header-design.jpg" class="slider-image">
+          <img src="red-lonely-chair-website-header-design.jpg" class="slider-image">
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="#slider-image-1" class="slider-button"><a/>
+        <a href="#slider-image-2" class="slider-button"><a/>
+        <a href="#slider-image-3" class="slider-button"><a/>
       </div>
       <div class= "navbar">
         <a class="active" href="index.html">Home</a>
-        <a href  = "about.html"> About Us</a>
+        <div class="About-Us">
+          <button class="dropbtnC" href="about.html">About-Us
+            <i class="fa fa-caret-down"></i>
+          </button>
+        <div class="dropdown-contentC">
+      <a href="#">Our Mission and vision</a>
+      <a href="#">Our Values</a>
+      <a href="#">Leadership</a>
+      </div>
+    </div>
+
         <div class="Get-Involved">
           <button class="dropbtn" href="involved.html">Get-Involved
             <i class="fa fa-caret-down"></i>
           </button>
         <div class="dropdown-content">
       <a href="#">Students</a>
-
+      </div>
     </div>
-  </div>
         <a href  = "RTFR.html"> RTFR</a>
         <div class="Community">
     <button class="dropbtnA" href="reach.html">Community
