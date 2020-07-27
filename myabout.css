@@ -3,60 +3,118 @@
   src: url("grace.ttf");
 }
 
-.icon {
-  border-radius: 50%;
-  margin:auto;
-  float: left;
+.container {
+   position: relative;
+   width: 1300px;
+   height: 500px;
+   margin: 70px auto;
+
+
 }
 
-.container_text{
-  display: inline;
-  float: right;
+.container .box{
+  position: relative;
+  width: calc(650px - 50px);
+  height: calc(500px - 30px);
+  background-color: #007C92;
+/*background:url("thumbnail.jpg") repeat, #007C92;*/
+  float: left;
+  margin: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
 }
-.column {
+
+.container .box .text{
+  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+  justify-content: center;
+  font-size: 37px;
+  color: white;
+}
+
+.container .box:hover  {
+   top:20px;
+   right: calc(50%-40px);
+   width: 80px/2;
+   height: 120px;
+
+}
+
+.container .box:hover .text {
+  font-size: 20px;
+}
+.container .box .stuffInHover {
+  position: absolute;
+  top: 120px;
+  height: calc(100% - 100px);
   text-align: center;
-  float: left;
-  width: 50%;
-  font-family: myFont;
-}
-p.b{
-  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
-}
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 30px;
 
-p.d {
-  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  font-family: myFont;
 
 }
 
+.container .box .stuffInHover .p{
+  color: black;
+  font-size: 40px;
 }
 
 
-p.c{
-  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
-}
 
+
+.headerContainer{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("thumbnail.jpg");
+  background-repeat: repeat;
+}
 .header{
+
   font-family: myFont;
   text-align: center;
+  font-size: 50px;
+
+}
+.headerContainer .header .h1{
+  font-size: 40px;
 }
 
-p.a{
-  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+
+.hoverContainer .headerContainer:hover .header{
+  background-color: #007C92;
 }
 
 .leaderheader{
-    font-family: myFont;
-    text-align: center;
+  margin-top: 60px;
+  text-align: center;
+  overflow: hidden;
 
 }
-.imageB{
-  float: right; 
+
+
+
+.leaderheader .h1{
+    font-family: myFont;
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+.leaderheader .our_team{
+  display: flex;
+  width: auto;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.leaderheader .our_team .team_member{
+  width: 250px;
+  margin: 5px;
+  background: #007C92;
 }
