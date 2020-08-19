@@ -10,6 +10,7 @@
    margin: 70px auto;
 
 
+
 }
 
 .container .box{
@@ -17,7 +18,7 @@
   width: calc(650px - 50px);
   height: calc(500px - 30px);
   background-color: #007C92;
-/*background:url("thumbnail.jpg") repeat, #007C92;*/
+  background:url("jstart_dots.png") repeat, #007C92;
   float: left;
   margin: 25px;
   box-sizing: border-box;
@@ -25,6 +26,15 @@
   border-radius: 10px;
   justify-content: center;
   display: flex;
+}
+.container .box .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .container .box .text{
@@ -42,26 +52,7 @@
 
 }
 
-.container .box:hover .text {
-  font-size: 20px;
-}
-.container .box .stuffInHover {
-  position: absolute;
-  top: 120px;
-  height: calc(100% - 100px);
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  font-size: 30px;
 
-
-
-}
-
-.container .box .stuffInHover .p{
-  color: black;
-  font-size: 40px;
-}
 
 
 
@@ -86,6 +77,8 @@
 
 
 .hoverContainer .headerContainer:hover .header{
+
+  background-image: url("jstart_dots.png");
   background-color: #007C92;
 }
 
@@ -167,24 +160,61 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: all 0.5s ease; 
+   transition: all 0.5s ease;
+}
+.leaderheader .our_team .team_member .email .itemPic{
+  margin: 0 10px;
+}
+.leaderheader .our_team .team_member .email .itemPic .far{
+  color: #D52B1E;
+  font-size: 20px;
 }
 .footer {
-  background: #303036;
+  background: #D1D4D3;
   color: #D52B1E;
   height: 400px;
   position: relative;
+  margin: none;
 }
 
 .footer .footer-content{
-  border: 1px solid #007C92;
+  border: 1px solid white;
   height: 350px;
+  display: flex;
 
 }
+.footer .footer-links{
+  border: 1px solid white;
+  height: 350px;
+  display: flex;
+}
+.footer .footer-content .footer-about {
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+  font-size: 14px;
+  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+  color: #D52B1E;
+}
+.footer .footer-content .footer-links{
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+  font-size: 14px;
+}
+
+
+
+.footer .footer-content .footer-contact{
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+  font-size: 14px;
+}
 .footer .footer-bottom{
-  background: #D1D4D3;
-  color: #f9f9f9;
-  height: 50px;
+  background-color: #D1D4D3;
+
+  height: 30px;
   width: 100%;
   text-align: center;
   position: absolute;
@@ -192,6 +222,6 @@
   left: 0px;
   padding-top: 20px;
 }
-.h3 {
-  float: right;
+.footer-About {
+  font-size: 14px;
 }

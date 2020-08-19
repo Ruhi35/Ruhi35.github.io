@@ -13,12 +13,13 @@ body{
   font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
 }
  .slideBar {
-width: auto;
+box-sizing: border-box;
+display: inline;
 height: auto;
 overflow:hidden;
 margin-left: auto;
 margin-right: auto;
-text-align: center;
+
 }
 .image-container {
   width: 300%;
@@ -31,10 +32,11 @@ text-align: center;
 
 }
 .slider-image{
-  float: left;
+  float: pictureContainer;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .button-container{
   top: -20px;
@@ -130,7 +132,7 @@ justify-content:center;
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+
 .navbar a:hover, .About-Us:hover .dropbtn {
   background-color:#D1D4D3;
 }
@@ -222,15 +224,19 @@ justify-content:center;
 .Community:hover .dropdown-contentB {
   display: block;
 }
+
+
 .text .h1{
   font-family: : myFont;
+
 }
 
 
 .headline {
   font-family: myFont;
- text-align: : center;
+ text-align: center;
 justify-content: center;
+
 
 }
  .h1{
@@ -239,28 +245,39 @@ justify-content: center;
 }
 
 .mainArea{
+  height: 500px;
   display:flex;
   align-items: center;
   justify-content: center;
+  background-color:#99BFC2;
 
 
 }
   .img{
+
    max-width: 100%;
 
  }
 .center{
+  box-sizing: border-box;
+  width: 100%;
   border-radius: 25px;
   display: block;
   margin-left: none;
   margin-right: none;
 }
 .pictureContainer{
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   flex-basis: 40%
 
 }
 .story{
   flex-basis: 50%;
+  margin-right: 25px;
+  margin-left: 25px;
 
 }
 .hovContainer{
@@ -288,6 +305,7 @@ justify-content: center;
 .hovContainer .box .imgBox{
   position: relative;
   overflow: hidden;
+  border-radius: 25px;
 
 }
 
@@ -301,29 +319,86 @@ justify-content: center;
 
 .hovContainer .box:hover .imgBox img{
   transform: scale(1.2);
+
 }
 
 .hovContainer .box .details{
+
   position: absolute;
   top: 10px;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, .8);
+  transform: scaleY(0);
+  transition: transform .5s; */
+}
+.hovContainer .box:hover .details{
+transform: scaleY(1);
+
+
+}
+.hovContainer .box .details .hovContent{
+
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ text-align: center;
+ padding: 15px;
+ color: #fff;
 }
 
+.hovContainer .box .details .hovContent h2{
+margin: 0;
+padding: 0;
+font-size: 20px;
+color: #ff0;
+}
 .footer {
-  background: #303036;
+  background: #D1D4D3;
   color: #D52B1E;
   height: 400px;
   position: relative;
+  margin: none;
 }
 
 .footer .footer-content{
-  border: 1px solid #007C92;
+  border: 1px solid white;
   height: 350px;
+  display: flex;
 
 }
+.footer .footer-links{
+  border: 1px solid white;
+  height: 350px;
+  display: flex;
+}
+.footer .footer-content .footer-about {
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+  font-size: 14px;
+  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+  color: #D52B1E;
+}
+.footer .footer-content .footer-links{
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+  font-size: 14px;
+}
+
+
+
+.footer .footer-content .footer-contact{
+  flex: 1;
+  padding: 25px;
+  border: 1px solid white;
+  font-size: 14px;
+}
 .footer .footer-bottom{
-  background: #D1D4D3;
-  color: #f9f9f9;
-  height: 50px;
+  background-color: #D1D4D3;
+
+  height: 30px;
   width: 100%;
   text-align: center;
   position: absolute;
@@ -331,6 +406,6 @@ justify-content: center;
   left: 0px;
   padding-top: 20px;
 }
-.h3 {
-  float: right;
+.footer-About {
+  font-size: 14px;
 }
